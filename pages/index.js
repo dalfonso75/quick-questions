@@ -9,9 +9,45 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="grid place-items-center first-letter h-screen w-full max-w-md mx-auto">
+      <main className="first-letter h-screen w-full max-w-md mx-auto">
+        <h2 className="mb-4 font-bold text-2xl text-white">
+          Preguntas acerca de cultura y capciosas
+        </h2>
+        <ul className="text-white text-lg leading-6 mb-5">
+          <li>
+            1. Son preguntas con multiples respuestas, solo una es la correcta
+          </li>
+          <li>
+            2. Las preguntas contarán con un temporizador de 30 segundos para
+            responder.
+          </li>
+          <li>
+            3. Si el usuario no responde antes de que se acabe el tiempo, se
+            añadirán 30 segundos a su registro de tiempos.
+          </li>
+          <li>
+            4. ¿Cómo funciona el registro de tiempo que llevará el usuario?
+            <ul className="ml-2">
+              <li>
+                4.1 El usuario debe registrar los segundos que tarda en
+                responder cada pregunta y sumarlos para obtener su tiempo total.
+                Tenga en cuenta que el temporizador es descendente, empezando en
+                30 segundos y terminando en 0 segundos. Para calcular el tiempo
+                total, el usuario debe restar el tiempo final del tiempo inicial
+                y, si comete un error en la operación, se le sumarán 10 segundos
+                adicionales
+              </li>
+            </ul>
+          </li>
+          <li>
+            5. Si el usuario responde incorrectamente o se acaba el tiempo, se
+            le sumarán 30 segundos adicionales. Además, se le ofrecerá una
+            segunda oportunidad sin un temporizador. Si vuelve a responder
+            incorrectamente, se le sumarán otros 30 segundos adicionales.
+          </li>
+        </ul>
         <Link
-          className="grid place-items-center text-black text-xl font-bold bg-white h-28 w-28 rounded-[50%]"
+          className="mx-auto grid place-items-center text-black text-xl font-bold bg-white h-28 w-28 rounded-[50%]"
           href="/dinamyc"
         >
           Empezar
