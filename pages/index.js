@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Questions from "@/components/Questions";
+import Link from "next/link";
 export default function Home() {
   return (
     <>
@@ -9,8 +9,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-white h-screen w-full max-w-md mx-auto">
-        <Questions />
+      <main className="grid place-items-center first-letter h-screen w-full max-w-md mx-auto">
+        <Link
+          className="grid place-items-center text-black text-xl font-bold bg-white h-28 w-28 rounded-[50%]"
+          href="/dinamyc"
+        >
+          Empezar
+        </Link>
       </main>
     </>
   );
